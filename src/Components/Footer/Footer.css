@@ -1,0 +1,49 @@
+.footer {
+    padding: 100px 0 50px 150px;
+}
+img {
+    width: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.footer-list {
+    margin: 2% 0;
+}
+.footer-list ul li {
+    display: inline-flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: grey;
+    max-width: 980px;
+    width: 250px;
+    padding: .3rem 0%;
+    cursor: pointer;
+}
+.footer-list ul li:hover {
+    text-decoration: underline;
+}
+
+.service-code button{
+    padding: 5px;
+    border: 1px solid grey;
+    color: grey;
+    background-color: #111;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+.service-code button:hover {
+    color: #fff;
+}
+
+.copyright p {
+    font-size: 13px;
+    color: grey;
+    margin-bottom: 10px;
+}
+.copyright a {
+    text-decoration: none;
+}
+.copyright a:hover {
+    text-decoration: underline;
+    color: #00a78e;
+}

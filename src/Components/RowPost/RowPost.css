@@ -1,0 +1,65 @@
+.rowpost {
+    padding-left: 30px;
+    margin-top: 50px;
+}
+.row-title {
+    display: flex;
+    align-items: baseline;
+}
+.explore-all {
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(-100%);
+}
+.row-title .explore-all, span {
+    font-size: smaller;
+    margin-left: 10px;
+    color: #53b6c0;
+    font-weight: bolder;
+}
+.row-title span {
+    margin-left: 0;
+    font-size: 1em;
+    display: none;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(0%);
+}
+.explore {
+    width: fit-content;
+    display: flex;
+    align-items: baseline;
+}
+.row-title:hover .explore span {
+    display: block;
+}
+.explore:hover .explore-all,.genre-title:hover + .explore .explore-all {
+    height: auto;
+    width: auto;
+    opacity: 1;
+    transform: translateX(0%);
+}
+.explore:hover span,.genre-title:hover + .explore span {
+    transform: translateX(100%);
+}
+.row-title h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.row-content {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.row-content::-webkit-scrollbar {
+    display: none;
+}
+.row-content img {
+    width: 250px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
