@@ -40,7 +40,7 @@ function NavBar() {
 
     function openCloseNav() {
         setSideNav(!sideNav);
-        setStyleNav({width: sideNav ? '0' : is600px ? '60%' : '40%'});
+        setStyleNav({width: sideNav ? '0' : is600px ? '75%' : '40%'});
     }
     
     const [menuListElements,setMenuListElements] = useState([]);
