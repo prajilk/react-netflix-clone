@@ -8,12 +8,12 @@ function NavBar() {
     const [scrolled, setScrolled] = useState(false);
     const [sideNav, setSideNav] = useState(false);
     const [styleNav, setStyleNav] = useState({width: '0'});
-    const [styleCloseDiv, setStyleCloseDiv] = useState({display: 'none'});
 
     // STYLE ============ //
     const is1024px = useMediaQuery('(min-width: 1024px)');
     const is1023px = useMediaQuery('(max-width: 1023px)');
     const is600px = useMediaQuery('(max-width: 600px)');
+
     const navBarBgStyle = {
         background: is1024px ? 
                         scrolled ? 
@@ -41,7 +41,6 @@ function NavBar() {
     function openCloseNav() {
         setSideNav(!sideNav);
         setStyleNav({width: sideNav ? '0' : is600px ? '60%' : '40%'});
-        setStyleCloseDiv({display: sideNav ? 'none' : 'block'});
     }
     
     const [menuListElements,setMenuListElements] = useState([]);
@@ -76,9 +75,9 @@ function NavBar() {
                                 {menuListElements}
                             </div>
                         </div>
-                    <div className="close-div" style={styleCloseDiv} onClick={openCloseNav}></div>
+                    {sideNav && <div className="close-div" onClick={openCloseNav}></div>}
                 </div>
-                    <img src="https://img.icons8.com/ios-glyphs/60/FFFFFF/menu--v1.png" alt='' onClick={openCloseNav}/>
+                {is1023px && <img src="https://img.icons8.com/ios-glyphs/60/FFFFFF/menu--v1.png" alt='' onClick={openCloseNav}/>}
                 </div>
                 <div className="logo">
                     <img src={logoImg} className="logo-img" alt="" />

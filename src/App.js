@@ -3,12 +3,14 @@ import './App.css';
 import Banner from './Components/Banner/Banner';
 import RowPost from './Components/RowPost/RowPost';
 import Footer from './Components/Footer/Footer';
+import useMediaQuery from './Components/MediaQuery/UseMediaQuery';
 
 function App() {
+  const is1024px = useMediaQuery('(min-width: 1024px)');
   return (
     <div className="App">
       <NavBar />
-      <Banner />
+      {is1024px && <Banner />}
       <RowPost title={'Trending Now'}/>
       <RowPost title={'Hindi Movies & TV'}/>
       <RowPost title={'Action Movies'}/>
