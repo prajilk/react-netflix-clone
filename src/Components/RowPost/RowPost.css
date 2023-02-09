@@ -54,6 +54,7 @@
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
+    height: auto;
 }
 .row-content::-webkit-scrollbar {
     display: none;
@@ -63,7 +64,57 @@
     margin-right: 5px;
     border-radius: 5px;
 }
-
+.img-cont {
+    position: relative;
+}
+.img-cont .movie-hover {
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    transition: 0.5s;
+    position: absolute;
+}
+.img-cont:hover .movie-hover{
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    /* background: linear-gradient(180deg, transparent, rgba(37,37,37,.70), rgba(37, 37, 37, 1)); */
+    background: linear-gradient(transparent, rgba(37,37,37,.60), rgba(37, 37, 37, 1));
+    position: absolute;
+}
+.movie-hover {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.movie-hover h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 5%;
+    width: 100%;
+}
+.movie-hover .card-buttons {
+    position: absolute;
+    display: flex;
+    bottom: 10%;
+    left: 5%;
+}
+.card-buttons .rate, .Q {
+    font-size: .9rem;
+    font-weight: 400;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 0 10px 3px 5px;
+}
+.card-buttons .release {
+    font-weight: 400;
+    margin: 0 10px;
+}
+.card-buttons .Q {
+    font-size: .8rem;
+    border-radius: 2px;
+    padding: 0 5px 3px 5px;
+}
 
 
 @media only screen and (max-width: 1023px) {

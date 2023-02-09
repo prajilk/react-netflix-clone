@@ -4,6 +4,7 @@
     height: 50px;
     box-sizing: border-box;
     padding: 35px 25px;
+    z-index: 2;
     width: 100%;
     display: flex;
     justify-content: space-between;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {logoImg, avatarImg} from '../../Images/imgUrls'
+import { logoImg, avatarImg } from '../Constants';
 import useMediaQuery from '../MediaQuery/UseMediaQuery';
 import './NavBar.css'
 
