@@ -55,12 +55,12 @@ function NavBar() {
 
     function handleSearch(){
         if (is1023px && query.trim().length !== 0){
-            navigate('/react-netflix-clone/search?q=' + query.split(' ').join('+'));
+            navigate('/search?q=' + query.split(' ').join('+'));
         }
     }
 
     const goHome = () => {
-        navigate('/react-netflix-clone');
+        navigate('/');
     }
 
 
