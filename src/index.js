@@ -11,7 +11,7 @@ import Error404 from './Components/Error404/Error404';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/react-netflix-clone",
     element: <App/>,
   },
   {
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     element: <Error404/>,
   },
   {
-    path: "/search",
+    path: "/react-netflix-clone/search",
     element: <Search />
   },
 ]);

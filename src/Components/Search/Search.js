@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { IMG_URL } from '../Constants';
 import Footer from '../Footer/Footer';
+import useMediaQuery from '../MediaQuery/UseMediaQuery';
 import NavBar from '../NavBar/NavBar'
 import { search } from '../Urls';
 import './Search.css'
@@ -12,6 +13,8 @@ function Search() {
     const [resultTitle,setResultTitle] = useState('');
     const [rowMovies, setRowMovies] = useState([]);
     const [isNextQuery, setIsNextQuery] = useState(true);
+
+    const is1024px = useMediaQuery('(min-width: 1024px)');
 
     useEffect(()=>{
 
@@ -36,7 +39,7 @@ function Search() {
   return (
     <div>
         <NavBar />
-        <div className='result-page' style={{marginBottom: !isNextQuery ? '60vh' : '0'}}>
+        <div className='result-page' style={{marginBottom: !isNextQuery ? '60vh' : '0', marginTop: is1024px ? '80px': '0'}}>
             <div className="results-title">
                 <h1>{resultTitle}</h1>
             </div>
