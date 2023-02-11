@@ -1,0 +1,124 @@
+.erro404 {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error-page-container {
+    text-align: center;
+    height: fit-content;
+}
+.error-page-container h1 {
+    font-size: 5rem;
+    margin-bottom: 30px;
+}
+.error-page-container p {
+    max-width: 600px;
+    font-size: 1.4rem;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+.error-page-container a {
+    background-color: white;
+    color: black;
+    padding: .5rem 1.3rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.error-page-container .code-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.error-page-container h3 {
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    border-left: 2px solid red;
+    width: fit-content;
+}
+.error-page-container h3 span {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.error-page-container a:hover {
+    background-color: lightgrey;
+}
+
+
+
+@media only screen and (max-width: 1023px) {
+    .error-page-container h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    .error-page-container p {
+        font-size: 1rem;
+        max-width: 400px;
+        margin-bottom: 30px;
+    }
+    .error-page-container a {
+        font-size: 1rem;
+        padding: .3rem .9rem;
+    }
+    .error-page-container .code-container {
+        margin-top: 30px;
+    }
+    .error-page-container h3 {
+        font-size: 1.3rem;
+        padding: 7px;
+    }
+    .error-page-container h3 span {
+        font-size: 1.3rem;
+    }
+    
+}
+@media only screen and (max-width: 500px) {
+    .error-page-container h1 {
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+    }
+    .error-page-container p {
+        font-size: .9rem;
+        max-width: 300px;
+        margin-bottom: 30px;
+    }
+    .error-page-container .code-container {
+        margin-top: 30px;
+    }
+    .error-page-container h3 {
+        font-size: 1.3rem;
+        padding: 7px;
+    }
+    .error-page-container h3 span {
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .error-page-container h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    .error-page-container p {
+        font-size: 1rem;
+        max-width: 300px;
+        margin-bottom: 30px;
+    }
+    .error-page-container a {
+        font-size: 1rem;
+        padding: .3rem .9rem;
+    }
+    .error-page-container .code-container {
+        margin-top: 30px;
+    }
+    .error-page-container h3 {
+        font-size: 1.3rem;
+        padding: 7px;
+    }
+    .error-page-container h3 span {
+        font-size: 1.3rem;
+    }
+}

@@ -11,3 +11,4 @@ export const comedies = `${BASE_URL}discover/movie?api_key=${API_KEY}&with_genre
 export const thrillers = `${BASE_URL}discover/movie?api_key=${API_KEY}&with_genres=53`
 export const adventures = `${BASE_URL}discover/movie?api_key=${API_KEY}&with_genres=12`
 export const horror = `${BASE_URL}discover/movie?api_key=${API_KEY}&with_genres=27`
+export const search = `${BASE_URL}search/multi?api_key=${API_KEY}&language=en-US&query=`

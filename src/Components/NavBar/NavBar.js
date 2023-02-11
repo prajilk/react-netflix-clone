@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { logoImg, avatarImg } from '../Constants';
 import useMediaQuery from '../MediaQuery/UseMediaQuery';
 import './NavBar.css'
@@ -8,6 +9,7 @@ function NavBar() {
     const [scrolled, setScrolled] = useState(false);
     const [sideNav, setSideNav] = useState(false);
     const [styleNav, setStyleNav] = useState({width: '0'});
+    const [query, setQuery] = useState('');
 
     // STYLE ============ //
     const is1024px = useMediaQuery('(min-width: 1024px)');
@@ -49,6 +51,19 @@ function NavBar() {
         list.map((item,index)=> setMenuListElements(prevList => [...prevList,<h1 key={index}>{item}</h1>]))
     },[])
 
+    const navigate = useNavigate();
+
+    function handleSearch(){
+        if (is1023px && query.trim().length !== 0){
+            navigate('/search?q=' + query.split(' ').join('+'));
+        }
+    }
+
+    const goHome = () => {
+        navigate('/');
+    }
+
+
     return (
         <div className='navbar' style={navBarBgStyle}>
             <div className="left-section">
@@ -80,7 +95,7 @@ function NavBar() {
                 {is1023px && <img src="https://img.icons8.com/ios-glyphs/60/FFFFFF/menu--v1.png" alt='' onClick={openCloseNav}/>}
                 </div>
                 <div className="logo">
-                    <img src={logoImg} className="logo-img" alt="" />
+                    <img src={logoImg} className="logo-img" alt="" onClick={goHome} />
                 </div>
                 <div className="list">
                     <ul>
@@ -99,7 +114,13 @@ function NavBar() {
                 <img src={avatarImg} className="avatar-img" alt="" />
                 <img className='arrow' src="https://img.icons8.com/material-rounded/24/FFFFFF/give-way.png" alt=''/>
             </div>
-            <input type="text" className='search-box' placeholder='Search'/>
+            <input name='query'
+                type="text" 
+                className='search-box' 
+                placeholder='Search' 
+                onChange={(e)=>{setQuery(e.target.value)}}
+                onKeyPress={(e) => (e.key === 'Enter' || e.key === "NumpadEnter") && handleSearch()}
+            />
         </div>
     )
 }
