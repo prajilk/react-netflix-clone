@@ -36,6 +36,7 @@ function Search() {
             setIsNextQuery(false);
         }
     },[queryParam])
+
   return (
     <div>
         <NavBar />
@@ -43,13 +44,14 @@ function Search() {
             <div className="results-title">
                 <h1>{resultTitle}</h1>
             </div>
+            
             {isNextQuery && <div className="results">
                 {rowMovies && rowMovies.map((movie,index)=> {
                     if(movie.backdrop_path === null || !movie.hasOwnProperty('backdrop_path')){
                         return null;
                     }
                     return(
-                        <img src={`${IMG_URL+movie.backdrop_path}`} alt="" key={index}/>
+                        <img src={`${IMG_URL+movie.backdrop_path}`} key={index} alt=''/>
                     )
                 })}
             </div>}

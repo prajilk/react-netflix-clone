@@ -54,13 +54,18 @@ function NavBar() {
     const navigate = useNavigate();
 
     function handleSearch(){
-        if (is1023px && query.trim().length !== 0){
+        if (query.trim().length !== 0){
             navigate('/search?q=' + query.split(' ').join('+'));
         }
     }
 
     const goHome = () => {
         navigate('/');
+    }
+
+    const [width,setWidth] = useState('0');
+    const showInput = () => {
+        setWidth('100%');
     }
 
 
@@ -108,14 +113,22 @@ function NavBar() {
                     </ul>
                 </div>
             </div>
-            <div className="right-section">
-                <img src="https://img.icons8.com/ios/50/FFFFFF/search--v1.png" alt=''/>
+            <div className="right-section" style={{display: 'flex'}}>
+                <div style={{display: 'flex', marginRight: '5px'}}>
+                    <img src="https://img.icons8.com/ios/50/FFFFFF/search--v1.png" alt='' onClick={showInput}/>
+                    <input 
+                        type="text" 
+                        style={{width: `${width}`, border: '0',outline: '0', transition: '.5s', color: 'black'}}
+                        placeholder='Search' 
+                        onChange={(e)=>{setQuery(e.target.value)}}
+                        onKeyPress={(e) => (e.key === 'Enter' || e.key === "NumpadEnter") && handleSearch()}
+                     />
+                </div>
                 <img src="https://img.icons8.com/material-outlined/24/FFFFFF/filled-appointment-reminders.png" alt=''/>
                 <img src={avatarImg} className="avatar-img" alt="" />
                 <img className='arrow' src="https://img.icons8.com/material-rounded/24/FFFFFF/give-way.png" alt=''/>
             </div>
-            <input name='query'
-                type="text" 
+            <input type="text" 
                 className='search-box' 
                 placeholder='Search' 
                 onChange={(e)=>{setQuery(e.target.value)}}

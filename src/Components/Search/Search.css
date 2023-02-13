@@ -2,8 +2,9 @@
     padding: 0 20px;
 }
 .results {
-    /* display: flex; */
+    display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 .results-title h1 {
     font-size: 1.2rem;
@@ -11,10 +12,16 @@
     margin-bottom: 10px;
     color: grey;
 }
+.search-result-cards {
+    position: relative;
+    height: 23vh;
+    margin-bottom: 10px;
+}
 .results img {
-    width: 250px;
-    margin-right: 5px;
-    border-radius: 5px;
+    width: 240px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+    border-radius: 1px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -22,16 +29,10 @@
         font-size: 1.6rem;
         margin-bottom: 20px;
     }
-    .results img {
-        width: 240px;
-        margin-right: 3px;
-        border-radius: 1px;
-        margin-bottom: 5px;
-    }
 }
 @media only screen and (max-width: 1023px) {
     .results img {
-        width: 250px;
+        width: 23vw;
         margin-right: 3px;
         border-radius: 1px;
         margin-bottom: 5px;
@@ -39,16 +40,16 @@
 }
 @media only screen and (max-width: 800px) {
     .results img {
-        width: 25%;
-        margin-right: 0px;
+        width: 23vw;
+        margin-right: 2px;
         border-radius: 1px;
         margin-bottom: 5px;
     }
 }
 @media only screen and (max-width: 600px) {
     .results img {
-        width: 33%;
-        margin-right: 0px;
+        width: 30vw;
+        margin-right: 2px;
         border-radius: 1px;
         margin-bottom: 5px;
     }
@@ -58,8 +59,8 @@
         font-size: 1.1rem;
     }
     .results img {
-        width: 50%;
-        margin-right: 0px;
+        width: 44vw;
+        margin-right: 2px;
         border-radius: 1px;
         margin-bottom: 5px;
     }
@@ -69,9 +70,8 @@
         font-size: 1rem;
     }
     .results img {
-        width: 50%;
-        margin-right: 0;
+        width: 42vw;
+        margin-right: 2px;
         border-radius: 1px;
-        margin-bottom: 5px;
     }
 }
