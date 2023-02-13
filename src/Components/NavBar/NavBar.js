@@ -113,7 +113,7 @@ function NavBar() {
                     </ul>
                 </div>
             </div>
-            <div className="right-section" style={{display: 'flex'}}>
+            {is1024px &&<div className="right-section" style={{display: 'flex'}}>
                 <div style={{display: 'flex', marginRight: '5px'}}>
                     <img src="https://img.icons8.com/ios/50/FFFFFF/search--v1.png" alt='' onClick={showInput}/>
                     <input 
@@ -127,7 +127,7 @@ function NavBar() {
                 <img src="https://img.icons8.com/material-outlined/24/FFFFFF/filled-appointment-reminders.png" alt=''/>
                 <img src={avatarImg} className="avatar-img" alt="" />
                 <img className='arrow' src="https://img.icons8.com/material-rounded/24/FFFFFF/give-way.png" alt=''/>
-            </div>
+            </div>}
             <input type="text" 
                 className='search-box' 
                 placeholder='Search' 
